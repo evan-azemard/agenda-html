@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body id="agendabody">
+<header>
+    <section id="s1h">
+        <article id="a1h">
+            <div id="d1h" class="rond">
+                <h1>Votre agenda !</h1>
+            </div>
+        </article>
+    </section>
+    <section id="s2h">
+        <article id="a2h">
+            <ul>
+                <div id="d1u" class="rond">
+                    <a href="#">
+                        <li>Connexion</li>
+                    </a>
+                </div>
+                <div id="d2u" class="rond">
+                    <a href="#">
+                        <li>Créer un compte</li>
+                    </a>
+                </div>
+                <div id="d3u" class="rond">
+                    <a href="#">
+                        <li>Mot de passe oublié</li>
+                    </a>
+                </div>
+            </ul>
+        </article>
+    </section>
+</header>
+<main>
+    <ul id="barre">
+        <li class="active1">
+            <a class="active" href="#"><div>Trier par</div></a>
+        </li>
+        <li>
+            <div id="divjm">
+                <select name="nom" class="form-control form1"  size="1">
+                    <option>Mois</option>
+                    <option><br></option>
+                    <option>Janvier</option>
+                    <option><br></option>
+                    <option>Février</option>
+                    <option><br></option>
+                    <option>Mars</option>
+                    <option><br></option>
+                    <option>Avril</option>
+                    <option><br></option>
+                    <option>Mai</option>
+                    <option><br></option>
+                    <option>Juin</option>
+                    <option><br></option>
+                    <option>Juillet</option>
+                    <option><br></option>
+                    <option>Août</option>
+                    <option><br></option>
+                    <option>Septembre</option>
+                    <option><br></option>
+                    <option>Novembre</option>
+                    <option><br></option>
+                    <option>Décembre</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <select name="nom" required="required" class="form-control form2" size="1">
+                <option>Jours</option>
+                <option><br></option>
+                <option>Lundi</option>
+                <option><br></option>
+                <option>Mardi</option>
+                <option><br></option>
+                <option>Mercredi</option>
+                <option><br></option>
+                <option>Jeudi</option>
+                <option><br></option>
+                <option>Vendredi</option>
+                <option><br></option>
+                <option>Samedi</option>
+                <option><br></option>
+                <option>Dimanche</option>
+            </select>
+            </div>
+        </li>
+        <li id="impo"><a href="formulaire.html"><span id="re">Ajouter un événement</span></a></li>
+    </ul>
+    <div id="années">
+        <div id="chevron"></div>
+        <div id="textdate">
+            <a href="#"><i class="fa fa-chevron-left mart" aria-hidden="true"></i></a>&#160;
+            <p>OCTOBRE 2020</p>&#160;
+            <a href="#"><i class="fa fa-chevron-right mart" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <div id="t">
+        <div id="trait">
+            <p>Je suis invisible</p> <!-- Text invisible pour la ligne -->
+        </div>
+    </div>
+    <section id="s1m">
+        <article id="search1">
+            <form id="search" method="post">
+                <input class="search_data" name="saisie" type="text" placeholder="Une recherche ?" required />
+            </form>
+        </article>
+    </section>
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th class="jourssem">
+                Lun.<br/>
+                <span class="jours">26</span>
+            </th>
+            <th class="jourssem">
+                Mar.<br/>
+                <span class="jours" id="span27">27</span>
+            </th>
+            <th class="jourssem">
+                Mer.<br/>
+                <span class="jours">28</span>
+            </th>
+            <th class="jourssem">
+                Jeu.<br/>
+                <span class="jours">29</span>
+            </th>
+            <th class="jourssem">
+                Ven.<br/>
+                <span class="jours">30</span>
+            </th>
+            <th class="jourssem" id="this-day">
+                Sam.<br/>
+                <span class="jours">31</span>
+            </th>
+            <th class="jourssem rred">
+                Dim.<br/>
+                <span class="jours">01</span>
+            </th>
+        </tr>
+
+        <th class="th-bord1"></th>
+        <th class="tborder "></th>
+        <th class="tborder red"></th>
+        <th class="tborder red"></th>
+        <th class="tborder red"></th>
+        <th class="tborder red"></th>
+        <th class="tborder red"></th>
+        <th class="tborder red" id="th-bordx"></th>
+        <th class="th-bord1 red1"></th>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">1AM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"><p>AnniversaireTimothée<br>Toute la journée</p></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">2AM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">3AM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">4AM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">5AM</span></td>
+            <td></td>
+            <td></td>
+            <td class="jaune">Programations<br>5h-6h30</td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">6AM</span></td>
+            <td></td>
+            <td></td>
+            <td class="jaune"></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">7AM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">8AM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>                <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">9AM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert">10AM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2 " ><span class="vert impotant">11AM</span></td>
+            <td class="td-nohover html">HTML<br>11h-12h</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="vert important">12AM</span></td>
+            <td class="td-nohover html"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">1PM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">2PM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">3PM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">4PM</span></td>
+            <td class="td-nohover"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">5PM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">6PM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">7PM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">8PM</span></td>
+            <td></td>
+            <td class="soir">soirées contrée-pétanque<br>20h-221h30</td>
+            <td></td>
+            <td></td>
+            <td class="soir">soirées contrée-pétanque<br>20h-22h</td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">9PM</span></td>
+            <td></td>
+            <td class="soir"></td>
+            <td></td>
+            <td></td>
+            <td class="soir"></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">10PM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2"><span class="verta">11PM</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ann"></td>
+            <td></td>
+            <td class="tborder-right"></td>
+        </tr>
+        <tr>
+            <td class="tborder-left"></td>
+            <td class="tborder-left2 tborder-sud"><span class="verta"></span></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud"></td>
+            <td class="tborder-sud tborder-right"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</main>
+<footer id="footer123">
+    <section id="s1f">
+        <article id="a1f">
+            <div id="d1f">
+                <h1><a href="#">Support</a> </h1>
+            </div>
+        </article>
+    </section>
+    <section id="s2f">
+        <article id="a2f">
+            <ul id="ulf">
+                <div id="d1uf">
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                </div>
+                <div id="d2uf">
+                    <a href="#">
+                        <li>blog</li>
+                    </a>
+                </div>
+                <div id="d3uf">
+                    <a href="#">
+                        <li>aide</li>
+                    </a>
+                </div>
+            </ul>
+        </article>
+    </section>
+</footer>
+</body>
+</html>
